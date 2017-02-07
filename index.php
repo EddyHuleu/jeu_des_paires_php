@@ -13,9 +13,13 @@ shuffle($tab);
 	<link href="https://fonts.googleapis.com/css?family=Kumar+One" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<script type="text/javascript">
-		var tab = [<?php foreach ($tab as $casetabimg){
-			echo '"'.$casetabimg.'",';
-        } ?>];
+		var tab = [<?php foreach ($tab as $casetabimg=>$image){
+			echo "'$image'";
+				if($casetabimg!=13){
+				echo",";
+				}
+			}
+        ?>];
 	</script>
 </head>
 
