@@ -62,11 +62,7 @@ function verif() { // Vérifie si une paire a été faite
 		return;
 	}
 	if (paires==7) {
-		clearInterval(timerID);//arette le chrono quand toutes les paires trouvées
-		document.getElementById("photo").style.display = 'block';
-		document.getElementById("photo").style.flexDirection = 'column';
-		document.getElementById("photo").innerHTML = 
-		'<h1> Vous avez gagné !</h1><br /><div class="boutton"><input type="button" class="restart" value="Recommencer" onClick="window.location.reload()"></div>';
+		document.location.href = "./index.php?pseudo="+prompt("pseudo")+"&min="+min+"&sec="+sec;
 	}
 }
 
